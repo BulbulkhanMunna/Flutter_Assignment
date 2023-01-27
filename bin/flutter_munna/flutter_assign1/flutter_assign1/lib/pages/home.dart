@@ -14,25 +14,38 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.only(top: 50, left: 30),
-          child: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Hello Munna',
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
-                ),
-                Text('Let`s make some app',
-                    style:
-                        TextStyle(fontSize: 15, fontWeight: FontWeight.w300)),
-                SizedBox(
-                  height: 30,
-                ),
-                SizedBox(
+        body: CustomScrollView(
+          slivers: <Widget>[
+            SliverAppBar(
+              pinned: true,
+              expandedHeight: 100,
+              title: Text('Hello Munna',style: TextStyle(),),
+              
+              
+              
+              
+              
+
+            ),
+            SliverToBoxAdapter(
+              
+              child: Padding(
+                padding: EdgeInsets.only(top: 20, left: 30),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Hello Munna',
+                      style:
+                          TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
+                    ),
+                    Text('Let`s make some app',
+                        style: TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.w300)),
+
+                            SizedBox(height: 10,),
+
+                            SizedBox(
                   height: 120,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
@@ -57,7 +70,7 @@ class Home extends StatelessWidget {
                                       color: Colors.white),
                                 ),
                                 Align(
-                                    alignment: Alignment.center,
+                                    alignment: Alignment.bottomRight,
                                     child: Image.asset(
                                       'assets/veg.png',
                                       width: 82,
@@ -72,7 +85,7 @@ class Home extends StatelessWidget {
                         height: 120,
                         width: 280,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 244, 56, 56),
+                          color: Color.fromARGB(161, 44, 175, 99),
                           borderRadius: BorderRadius.circular(15),
                         ),
                         child: Padding(
@@ -88,10 +101,10 @@ class Home extends StatelessWidget {
                                       color: Colors.white),
                                 ),
                                 Align(
-                                    alignment: Alignment.center,
+                                    alignment: Alignment.bottomRight,
                                     child: Image.asset(
-                                      'assets/mbb.png',
-                                      width: 50,
+                                      'assets/veg.png',
+                                      width: 82,
                                     )),
                               ]),
                         ),
@@ -119,7 +132,7 @@ class Home extends StatelessWidget {
                                       color: Colors.white),
                                 ),
                                 Align(
-                                    alignment: Alignment.center,
+                                    alignment: Alignment.bottomRight,
                                     child: Image.asset(
                                       'assets/veg.png',
                                       width: 82,
@@ -130,7 +143,8 @@ class Home extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+
+                   SizedBox(
                   height: 30,
                 ),
                 Row(
@@ -153,6 +167,7 @@ class Home extends StatelessWidget {
                     ),
                   ],
                 ),
+
                 SizedBox(
                   height: 10,
                 ),
@@ -182,6 +197,7 @@ class Home extends StatelessWidget {
                     },
                   ),
                 ),
+
                 SizedBox(
                   height: 30,
                 ),
@@ -252,8 +268,9 @@ class Home extends StatelessWidget {
                     ),
                   ],
                 ),
+
                 SizedBox(
-                  height: 10,
+                  height: 30,
                 ),
                 Row(
                   children: [
@@ -269,7 +286,7 @@ class Home extends StatelessWidget {
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                                Image(
+                              Image(
                                
                                 image: AssetImage('assets/watch.png'),
                                 width: 140,
@@ -322,8 +339,9 @@ class Home extends StatelessWidget {
                     ),
                   ],
                 ),
+
                 SizedBox(
-                  height: 10,
+                  height: 30,
                 ),
                 Row(
                   children: [
@@ -339,7 +357,7 @@ class Home extends StatelessWidget {
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                                Image(
+                              Image(
                                
                                 image: AssetImage('assets/watch.png'),
                                 width: 140,
@@ -392,11 +410,12 @@ class Home extends StatelessWidget {
                     ),
                   ],
                 ),
-              ],
-            ),
-          ),
+                  ],
+                ),
+              ),
+            )
+          ],
         ),
-      ),
     );
   }
 }
