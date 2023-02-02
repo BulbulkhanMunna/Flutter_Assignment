@@ -14,6 +14,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
         body: CustomScrollView(
           slivers: <Widget>[
             SliverAppBar(
@@ -204,6 +205,7 @@ class Home extends StatelessWidget {
                 Row(
                   children: [
                     Container(
+                      
                       height: 220,
                       width: 180,
                       decoration: BoxDecoration(

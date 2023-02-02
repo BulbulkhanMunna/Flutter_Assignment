@@ -4,8 +4,10 @@ class Account extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       floatingActionButton: FloatingActionButton(onPressed: (){}),
       body: Center(
-        child: Text('Account'),
+        child: ElevatedButton(
+                  onPressed: () {}, child: Text('This is elevated button2')),
       ),
     );
   }

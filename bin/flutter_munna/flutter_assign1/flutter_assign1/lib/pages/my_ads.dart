@@ -7,6 +7,7 @@ class MyAds extends StatelessWidget {
       length: 2,
       initialIndex: 0,
       child: Scaffold(
+         floatingActionButton: FloatingActionButton(onPressed: (){}),
         
           appBar: AppBar(
             automaticallyImplyLeading: false,
@@ -101,7 +102,7 @@ class MyAds extends StatelessWidget {
 
                             ),
                              child: Padding(
-                        padding: const EdgeInsets.only(top: 15, left: 1),
+                        padding:  EdgeInsets.only(top: 15, left: 1),
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
